@@ -1,0 +1,44 @@
+.navbar .logo {
+    float:  none;
+    text-align: center;
+    margin: 0 auto;
+  width: 100%;
+    display: block;
+}
+
+.navbar ul {
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+
+.navbar ul li {
+    float: none;
+    display: inline-block;
+}
+
+.navbar .field {
+    margin-top: 1em;
+}
+
+#showcase h1 {
+    margin-top: 0;
+    margin-top: 5em;
+}
+
+.services-card-1 {
+    float: none;
+    width: 100%;
+}
+
+.services-card-2 {
+    float: none;
+    width: 100%;
+}
+
+.services-card-1 .button-2{
+    float: right;
+}
+
+
+
