@@ -2,11 +2,11 @@ const btn_buscar = document.getElementById('btn-buscar');
 const loremArr = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae mollitia voluptates sit porro. Amet sequi voluptas exercitationem assumenda reprehenderit corrupti aliquid atque cumque illum, accusamus incidunt aliquam doloribus cum officiis!";
 const loremSplit = loremArr.split(" ")
 const input_buscar = document.getElementById('input-buscar');
+const madre = document.querySelector('.madre');
 
 const buscar = (e) => {
     e.preventDefault();
     for(i = 0; i < loremSplit.length; i++){
-       
         if(input_buscar.value == loremSplit[i]){
             const card = document.createRange().createContextualFragment(`
                 
@@ -14,18 +14,15 @@ const buscar = (e) => {
                 
                 `)
                 const lorem = document.getElementById('lorem');
-                const madre = loremArr.includes(loremSplit[i])
-                if(madre){
-                    console.log("match")
-                    card.append("red")
-                };
-                loremArr[i].toLowerCase
-
                 lorem.append(card)
-                
+                lorem.textContent=loremSplit[i]
+                word = lorem.textContent=loremSplit[i]
+                madre.style.color="red"
+                if(madre.includes("Lorem")){
+                    console.log("madre")
+                }
                 return true;
-           
-        }
+            }
       }
       if(input_buscar.value != loremSplit[i]){
         const card = document.createRange().createContextualFragment(`
@@ -33,11 +30,11 @@ const buscar = (e) => {
             <p>La palabra no existe</p>
             
             `)
-            const lorem = document.getElementById('lorem');
+            
+            lorem.textContent=loremSplit[i]
             lorem.append(card)
-            return false;
+           //lorem.remove(card)
     }
-
 }
 
 btn_buscar.addEventListener("click", buscar)
@@ -45,9 +42,9 @@ btn_buscar.addEventListener("click", buscar)
 function addLorem(){
     const text = document.createRange().createContextualFragment(`
         
-         <div class="text">
-                <p>${loremArr}</p>
-            </div>
+         
+                
+        
         
         `)
         const lorem = document.getElementById('lorem');
