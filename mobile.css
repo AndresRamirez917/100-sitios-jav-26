@@ -26,19 +26,25 @@
     margin-top: 5em;
 }
 
+#services h2 {
+    text-align: center;
+}
+
+#services .services-row .services-card-1 {
+   padding: 0;
+   margin: 0;
+   
+}    
+ 
 .services-card-1 {
     float: none;
     width: 100%;
 }
 
-.services-card-2 {
-    float: none;
-    width: 100%;
+.services-card-1 .button-2, .services-card-1 .button-4{
+float: right;
 }
 
-.services-card-1 .button-2{
-    float: right;
-}
 
 
 

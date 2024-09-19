@@ -81,7 +81,7 @@ form button {
     width: 100%;
 }
 
-.button-1 {
+.buttton-1 {
     background: blue;
     color: #fff;
     padding: 10px 20px;
@@ -91,19 +91,19 @@ form button {
     cursor: pointer;
 }
 
-.button-2 {
-    background: rgb(255, 255, 255);
-    border: 1px solid violet;
-    color: rgb(2, 2, 2);
-    padding: 10px 20px;
-    text-align: center;
-    letter-spacing: 2px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: .5em;
+.madre {
+    background: rgb(255, 255, 255) !important;
+    border: 1px solid violet !important;
+    color: rgb(2, 2, 2) !important;
+    padding: 10px 20px !important;
+    text-align: center !important;
+    letter-spacing: 2px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    margin-top: .5em !important;
 }
 
-.button-3 {
+.buttotn-3 {
     background: #000;
     color: white;
     padding: 10px 20px;
@@ -113,7 +113,7 @@ form button {
     cursor: pointer;
 }
 
-.button-4 {
+.buttton-4 {
     background: rgb(3, 109, 24);;
     color: #fff;
     padding: 3px 20px;
@@ -174,6 +174,23 @@ form button {
 }
 
 /* services */
+#services {
+    width: 90%;
+    margin: 0 auto;
+} 
+
+.services-card-1 p {
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.services-card-1 h3 {
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 #services h2 {
     font-size: 5em;
     font-weight: lighter !important;
@@ -185,16 +202,11 @@ form button {
 .services-card-1 {
     float: left;
     width: 40%;
+    margin-left: 70px;
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
-.services-card-2 {
-    float: right;
-    width: 40%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
 
 /* contact */
 

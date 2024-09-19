@@ -34,6 +34,7 @@ async function getData(){
     const result = await fetch('https://fakestoreapi.com/products/');
     const products = await result.json();
     const jsonArr = products.map(elemento => Object.entries(elemento));
+    console.log(jsonArr)
     const data = products.slice(0,4);
     products.forEach(element => {
         const randInt = randonData(1, jsonArr.length);
@@ -43,9 +44,9 @@ async function getData(){
                 const card = document.createRange().createContextualFragment(`
                     
                 <div class="services-card-1">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <h3>${jsonArr[ranIndex][1][1]}</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae mollitia voluptates sit porro. Amet sequi voluptas exercitationem assumenda reprehenderit corrupti aliquid atque cumque illum, accusamus incidunt aliquam doloribus cum officiis!</p>
-                    <button class="btn button-2">learn more</button>
+                    <button class="btn button-${i} madre" >Precio $${jsonArr[ranIndex][2][1]}</button>
                 </div>
 
                     `)
@@ -54,7 +55,7 @@ async function getData(){
             }
         }
         function randonData(min, max){
-            return Math.floor(Math.random() * (max - min + 1) + max)
+            return Math.floor(Math.random()*(max - min + 1) + min);
         }
     });
 }
